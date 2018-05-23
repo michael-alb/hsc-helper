@@ -12,11 +12,11 @@ class Home extends Component{
         super(props)
     
         this.state = {
-          promocoes: []
+          ordens_de_servicos: []
         }
-        base.bindToState('promocoes',{
+        base.bindToState('ordens_de_servicos',{
           context: this,
-          state: 'promocoes',
+          state: 'ordens_de_servicos',
           queries:{
             limitToLast: 6
           }
@@ -28,26 +28,28 @@ class Home extends Component{
     return (
         <div>
             <HeaderHome />
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
                 <div className="container">
                 <h3>Categorias</h3>
                 <div className="row">
                 { this.props.categorias.map( (cat, indice) => {
                     return [
                             <LinkCategoria categoria={cat} key={indice} />,
-                            ++index%4 === 0 && <div key={'c'+indice} className="w-100"></div>
+                            ++index%8 === 0 && <div key={'c'+indice} className="w-200"></div>
                         ]
                 })}
                 </div>
                     <br/>
                     <br/>
-                    <AdsHome />
-                    <br/>
-                    <br/>
-                <h3>Ultimos Anúncios</h3>
+                <h4>Ultimos Ordens de Serviços</h4>
                 <div className="row">
-                    { Object.keys(this.state.promocoes).map( key => {
-                      const promocao = this.state.promocoes[key]
-                    return <PromocaoHome key={key} id={key} promocao={promocao} />
+                    { Object.keys(this.state.ordens_de_servicos).map( key => {
+                      const ordem_de_servico = this.state.ordens_de_servicos[key]
+                    return <PromocaoHome key={key} id={key} ordem_de_servico={ordem_de_servico} />
                     })}
                 </div>
                 </div>

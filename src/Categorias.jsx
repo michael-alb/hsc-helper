@@ -19,7 +19,7 @@ const Categorias = (props) => {
                             cat => {
                                 return (
                                     <li key={cat.url}>
-                                        <Link className="btn btn-warning h-100 m-2 col-sm" to={`/categorias/${cat.url}`}>{cat.categoria}&nbsp;&nbsp;<i className={`fa ${cat.icon}`}></i></Link>
+                                        <Link className="btn btn-danger h-100 m-2 col-sm" to={`/categorias/${cat.url}`}>{cat.categoria}&nbsp;&nbsp;<i className={`fa ${cat.icon}`}></i></Link>
                                     </li>
                                 )
                             }

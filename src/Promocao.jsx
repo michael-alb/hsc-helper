@@ -6,20 +6,20 @@ class Promocao extends Component{
         super(props)
 
         this.state = {
-            promocao: {},
+            ordem_de_servico: {},
             isLoading: true
         }
 
         const id = this.props.match.params.idPromocao
-        const url = `https://akicupom-e5439.firebaseio.com//promocoes/${id}.json`
+        const url = `https://hschelper-801df.firebaseio.com//ordens_de_servicos/${id}.json`
         axios
             .get(url)
             .then(data =>{
-                this.setState({ promocao: data.data, isLoading: false })
+                this.setState({ ordem_de_servico: data.data, isLoading: false })
             })
     }
     render(){
-        const promocao = this.state.promocao
+        const ordem_de_servico = this.state.ordem_de_servico
 
         if(this.state.isLoading){
             return <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
@@ -27,10 +27,10 @@ class Promocao extends Component{
 
         return(
             <div>
-                <h1>{promocao.nome}</h1>
-                <img src={promocao.foto}/>
-                <p>{promocao.descricao}</p>
-                <p className="small">{promocao.fonecedor}</p>
+                <h1>{ordem_de_servico.nome}</h1>
+                <img src={ordem_de_servico.foto}/>
+                <p>{ordem_de_servico.descricao}</p>
+                <p className="small">{ordem_de_servico.fonecedor}</p>
             </div>
         )
 }

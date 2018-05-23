@@ -26,9 +26,8 @@ class App extends Component {
         <div className="App">
           <Route path='/' exact render={() => <Home categorias={this.state.categorias} />} />
           <Route path='/login' exact render={() => <Login />} />
-          <Route path='/nova-promocao' exact render={() => <NovaPromocao categorias={this.state.categorias} /> } />
+          <Route path='/nova-os' exact render={() => <NovaPromocao categorias={this.state.categorias} /> } />
           <Route path='/categorias' render={() => <Categorias categorias={this.state.categorias }/> } />
-          <Redirect from="/nova-promocao" to="/login"/>
           <Footer />
         </div>
       </Router>

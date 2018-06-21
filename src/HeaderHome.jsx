@@ -21,7 +21,7 @@ const HeaderHome = (props) => {
             </div>
         </nav>
 
-         <p className="text-center"><Link className="btn btn-anuncie btn-lg" to="/novo-anuncio" role="button">Cadastrar OS &raquo;</Link></p>
+         <p className="text-center"><Link className="btn btn-anuncie btn-lg" to="/novo-anuncio" role="button">Cadastrar OScd &raquo;</Link></p>
         </div>
     )
 }

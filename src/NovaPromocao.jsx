@@ -46,12 +46,12 @@ class NovaPromocao extends Component {
                     <h1>Nova Promoção</h1>
                     <form onSubmit={this.handleSubmit}>
                         <div className='form-group'>
-                            <label htmlFor='foto'>Foto</label>
+                            <label htmlFor='foto'>Anexo</label>
                             <input type='file' className='form-control' id='foto' placeholder='faça um upload de uma imagem' ref={(ref) => this.foto = ref} />
                         </div>
                         <div className='form-group'>
                             <label htmlFor='nome'>Nome</label>
-                            <input type='text' className='form-control' id='nome' placeholder='Insira o nome do anúncio' ref={(ref) => this.nome = ref} />
+                            <input type='text' className='form-control' id='nome' placeholder='Insira o nome do erro' ref={(ref) => this.nome = ref} />
                         </div>
                         <div className='form-group'>
                             <label htmlFor='nome'>Categorias</label>
@@ -64,8 +64,8 @@ class NovaPromocao extends Component {
                             <input type='text' className='form-control' id='descricao' placeholder='Insira o descrição do anúncio'  ref={(ref) => this.descricao = ref}/>
                         </div>
                         <div className='form-group'>
-                            <label htmlFor='preco'>Preço</label>
-                            <input type='text' className='form-control' id='preco' placeholder='Insira o preço do anúncio'  ref={(ref) => this.preco = ref}/>
+                            <label htmlFor='preco'>Descreva a Solução</label>
+                            <input type='text' className='form-control' id='preco' placeholder='Como resolveu a OS'  ref={(ref) => this.preco = ref}/>
                         </div>
                         <div className='form-group'>
                             <label htmlFor='telefone'>Telefone</label>
@@ -75,7 +75,7 @@ class NovaPromocao extends Component {
                             <label htmlFor='vendedor'>Fornecedor</label>
                             <input type='text' className='form-control' id='vendedor' placeholder='Digite seu nome'  ref={(ref) => this.fornecedor = ref}/>
                         </div>
-                        <button type='submit' className='btn btn-warning'>Salvar Anúncio</button>
+                        <button type='submit' className='btn btn-warning'>Salvar Solução</button>
                     </form>
                 </div>
             </div>

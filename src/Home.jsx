@@ -4,6 +4,7 @@ import base from './base'
 import HeaderHome from './HeaderHome'
 import PromocaoHome from './PromocaoHome'
 import AdsHome from './AdsHome'
+import "./css/Home.css"
 import LinkCategoria from './LinkCategoria'
 
 
